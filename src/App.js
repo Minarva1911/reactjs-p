@@ -1,26 +1,30 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import API from './Components/API/API';
+// import Index1 from './Components/Index/Index1';
+// import Signup from './Components/Signup/Signup';
+// import Signin from './Components/Signin/Signin';
+// import Index from './Components/Index/Index';
+// import Contact from './Components/Contact/Contact';
+// import Lifecycle from './Components/Lifecycle/Lifecycle';
+// import SetstateC from './Components/SetstateC/SetstateC';
+// import State from './Components/State/State';
+// import Eventbindarrow from './Components/Eventbindarrow/Eventbindarrow';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <switch>
+        <Route exact path='/' component={API}></Route>
+        {/* <Route exact path='/signup' component={Signup}></Route> */}
+        {/* <Route exact path='/index' component={Index}></Route> */}
+        {/* <Route exact path='/contact' component={Contact}></Route> */}
+      </switch>
+    </Router> 
   );
 }
 
 export default App;
+
